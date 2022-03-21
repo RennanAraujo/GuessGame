@@ -44,7 +44,7 @@ public class GuessGame {
 			if(guessp3 == targetNumber){
 				p3isRight = true;
 			}
-
+			/*
 			if(p1isRight || p2isRight || p3isRight){
 				System.out.println("We've got a champion");
 				System.out.println("Did player 1 nailed it? " + p1isRight);
@@ -52,7 +52,22 @@ public class GuessGame {
 				System.out.println("Did player 3 nailed it? " + p3isRight);
 				System.out.println("End of the game \n");
 				break;
+			}*/
+			if(p1isRight){
+				System.out.println("P1 is champion");
+				System.out.println("End of the game \n");
+				break;				
 			}
+			else if(p2isRight){
+				System.out.println("P2 is champion");
+				System.out.println("End of the game \n");
+				break;				
+			}
+			else if(p3isRight){
+				System.out.println("P3 is champion");
+				System.out.println("End of the game \n");
+				break;				
+			}			
 			else {
 				System.out.println("Try again \n");
 			}
