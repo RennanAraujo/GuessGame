@@ -1,4 +1,4 @@
-public class GuessGame{
+public class GuessGame {
 	Player p1;
 	Player p2;
 	Player p3;
@@ -18,20 +18,22 @@ public class GuessGame{
 
 		int targetNumber = (int) (Math.random()*10);
 		System.out.println("Thinking about a number: ...");
+		//Thread.sleep(1000);
 
 		while(true){
 			System.out.println("The number to guess is " + targetNumber);
+			//Thread.sleep(1000);
 
 			p1.guess();
 			p2.guess();
 			p3.guess();
 
 			guessp1 = p1.number;
-			System.out.println("Player 1" + guessp1);
+			System.out.println("Player 1 guess:" + guessp1);
 			guessp2 = p2.number;
-			System.out.println("Player 2" + guessp2);
+			System.out.println("Player 2 guess:" + guessp2);
 			guessp3 = p3.number;
-			System.out.println("Player 3", + guessp3);
+			System.out.println("Player 3 guess:" + guessp3);
 
 			if(guessp1 == targetNumber){
 				p1isRight = true;
@@ -39,17 +41,20 @@ public class GuessGame{
 			if(guessp2 == targetNumber){
 				p2isRight = true;
 			}
-			if(guessp3 = targetNumber){
+			if(guessp3 == targetNumber){
 				p3isRight = true;
 			}
 
 			if(p1isRight || p2isRight || p3isRight){
-				System.out.println("We've got a version");
-				System.out.println("Did player 1 nailed it?", + p1isRight);
-				System.out.println("Did player 2 nailed it?", + p2isRight);
-				System.out.println("Did player 3 nailed it?", + p3isRight);
-				System.out.println("End of the game");
+				System.out.println("We've got a champion");
+				System.out.println("Did player 1 nailed it? " + p1isRight);
+				System.out.println("Did player 2 nailed it? " + p2isRight);
+				System.out.println("Did player 3 nailed it? " + p3isRight);
+				System.out.println("End of the game \n");
 				break;
+			}
+			else {
+				System.out.println("Try again \n");
 			}
 		}
 	}
