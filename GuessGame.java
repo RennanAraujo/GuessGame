@@ -16,7 +16,7 @@ public class GuessGame {
 		boolean p2isRight = false;
 		boolean p3isRight = false;
 
-		int targetNumber = (int) (Math.random()*10);
+		int targetNumber = (int) (Math.random()*100);
 		System.out.println("Thinking about a number: ...");
 		//Thread.sleep(1000);
 
